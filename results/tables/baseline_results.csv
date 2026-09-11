@@ -1,0 +1,21 @@
+scheduler,scenario,mean_latency_ms,p95_latency_ms,p99_latency_ms,mean_jitter_ms,packet_loss_pct,priority_delay_ms,sla_satisfaction_pct,resource_utilization_pct,reconfiguration_count
+Static Slicing,scenario_A_normal,1.08,1.15,1.15,0.21,23.61,0.0,0.0,0.1,0
+Static Slicing,scenario_B_congestion_burst,1.17,1.56,1.58,0.23,23.6,0.0,0.0,0.2,0
+Static Slicing,scenario_C_camera_inspection,21.14,30.95,32.13,30.94,23.37,0.0,0.0,10.8,0
+Static Slicing,scenario_D_robot_convergence,1.11,1.18,1.2,0.2,23.66,0.0,1.7,0.2,0
+Static Slicing,scenario_E_critical_safety,1.18,1.99,2.0,0.27,21.62,2.59,0.0,0.2,0
+Static Slicing,scenario_F_mixed_traffic,5.59,8.92,10.76,21.36,23.42,10.6,0.0,2.1,0
+Static Slicing,scenario_G_repeated_bursts,1.38,2.04,2.08,0.4,21.92,0.0,1.7,0.4,0
+Static Slicing,scenario_H_unexpected_surge,6.01,52.91,54.61,1.73,23.41,0.0,0.0,8.5,0
+Static Slicing,scenario_I_robot_scaling,1.08,1.15,1.15,0.21,23.61,0.0,0.0,0.1,0
+Static Slicing,scenario_J_network_degradation,1.08,1.14,1.15,0.21,23.55,0.0,0.0,0.1,0
+Reactive Threshold,scenario_A_normal,1.08,1.15,1.15,0.21,23.61,0.0,0.0,0.1,0
+Reactive Threshold,scenario_B_congestion_burst,1.17,1.56,1.58,0.23,23.6,0.0,0.0,0.2,0
+Reactive Threshold,scenario_C_camera_inspection,21.14,30.95,32.13,30.94,23.37,0.0,0.0,10.8,0
+Reactive Threshold,scenario_D_robot_convergence,1.11,1.18,1.2,0.2,23.66,0.0,1.7,0.2,0
+Reactive Threshold,scenario_E_critical_safety,1.18,1.99,2.0,0.27,21.62,2.59,0.0,0.2,0
+Reactive Threshold,scenario_F_mixed_traffic,5.59,8.92,10.76,21.36,23.42,10.6,0.0,2.1,0
+Reactive Threshold,scenario_G_repeated_bursts,1.38,2.04,2.08,0.4,21.92,0.0,1.7,0.4,0
+Reactive Threshold,scenario_H_unexpected_surge,6.01,52.91,54.61,1.73,23.41,0.0,0.0,8.5,0
+Reactive Threshold,scenario_I_robot_scaling,1.08,1.15,1.15,0.21,23.61,0.0,0.0,0.1,0
+Reactive Threshold,scenario_J_network_degradation,1.08,1.14,1.15,0.21,23.55,0.0,0.0,0.1,0

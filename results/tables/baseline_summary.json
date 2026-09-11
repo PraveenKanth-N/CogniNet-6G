@@ -1,0 +1,24 @@
+{
+  "Reactive Threshold": {
+    "mean_latency_ms": 4.082,
+    "p95_latency_ms": 10.299,
+    "p99_latency_ms": 10.781,
+    "mean_jitter_ms": 5.576,
+    "packet_loss_pct": 23.177,
+    "priority_delay_ms": 1.319,
+    "sla_satisfaction_pct": 0.33999999999999997,
+    "resource_utilization_pct": 2.2700000000000005,
+    "reconfiguration_count": 0.0
+  },
+  "Static Slicing": {
+    "mean_latency_ms": 4.082,
+    "p95_latency_ms": 10.299,
+    "p99_latency_ms": 10.781,
+    "mean_jitter_ms": 5.576,
+    "packet_loss_pct": 23.177,
+    "priority_delay_ms": 1.319,
+    "sla_satisfaction_pct": 0.33999999999999997,
+    "resource_utilization_pct": 2.2700000000000005,
+    "reconfiguration_count": 0.0
+  }
+}
