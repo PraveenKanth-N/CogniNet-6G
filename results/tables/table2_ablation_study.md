@@ -1,0 +1,15 @@
+# Table 2: Systematic Ablation Study Summary
+
+| ID | Ablation Condition | Mean Latency (ms) | P95 Latency (ms) | Critical Latency (ms) | Reconfig Cost | Safety Overrides |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **A0** | Full CogniNet-6G (Proposed) | 1.15 | 1.57 | 0.45 | 0.0370 | 0.7 |
+| **A1** | w/o Safety Override Layer | 1.15 | 1.57 | 0.60 | 0.0367 | 0.0 |
+| **A2** | w/o Semantic Prioritization | 1.15 | 1.56 | 0.00 | 0.0045 | 0.0 |
+| **A3** | w/o Traffic Forecasting | 1.15 | 1.57 | 0.45 | 0.0367 | 0.7 |
+| **A4** | Transformer Predictor Baseline | 1.15 | 1.57 | 0.46 | 0.0357 | 0.7 |
+| **A5** | w/o Digital Twin Rolling Buffer | 1.15 | 1.57 | 0.45 | 0.0370 | 0.7 |
+| **A6** | w/o Reconfiguration Penalty | 1.15 | 1.57 | 0.45 | 0.0370 | 0.7 |
+| **A7** | Fallback: Static Slicing | 1.14 | 1.55 | 0.62 | 0.0000 | 0.0 |
+| **A8** | Fallback: Reactive Threshold | 1.14 | 1.55 | 0.62 | 0.0000 | 0.0 |
+| **A9** | Constrained Radio (50 Mbps) | 1.56 | 2.38 | 0.79 | 0.0385 | 0.7 |
+| **A10** | High-Density Fleet (20 Robots) | 1.56 | 2.30 | 0.73 | 0.0600 | 0.7 |

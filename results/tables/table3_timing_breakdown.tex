@@ -1,0 +1,21 @@
+\begin{table}[h]
+\centering
+\caption{Micro-latency Breakdown of CogniNet-6G Control Modules vs. Real-Time Budget}
+\label{tab:timing_breakdown}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Pipeline Module} & \textbf{Empirical Latency (ms)} & \textbf{Design Budget (ms)} \\
+\midrule
+Telemetry Ingress & Glitch Filtering (Module 100) & 0.38 & < 1.0 \\
+Digital Twin State Synchronization (Module 110) & 0.24 & < 1.0 \\
+LSTM Demand Forecasting Inference (Module 120) & 1.25 & < 5.0 \\
+Semantic Priority Classification (Module 130) & 0.28 & < 1.0 \\
+PPO Policy Action Generation (Module 140) & 0.42 & < 2.0 \\
+Deterministic Safety Feasibility Projection (Module 160) & 0.05 & < 0.5 \\
+Action Dispatch & Actuation (Module 150) & 0.12 & < 0.5 \\
+Reward Computation & State Logging (Module 170) & 0.08 & < 0.5 \\
+\midrule
+\textbf{Total Closed-Loop Orchestration Cycle} & \textbf{2.82} & \textbf{< 50.0} \\
+\bottomrule
+\end{tabular}
+\end{table}

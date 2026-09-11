@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Empirical Comparison of Network Slicing Schedulers in Private 6G Factory (10 Scenarios, 3 Seeds, $N=10$)}
+\label{tab:main_benchmark}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Scheduler} & \textbf{Mean Latency (ms)} & \textbf{P95 Latency (ms)} & \textbf{Jitter (ms)} & \textbf{Packet Loss (\%)} & \textbf{SLA Viol. (\%)} & \textbf{Crit. Lat. (ms)} & \textbf{Reconfig. Cost} \\
+\midrule
+\textbf{CogniNet-6G (Ours)} & 4.18 $\pm$ 6.02 & 10.18 $\pm$ 16.64 & 6.70 $\pm$ 12.03 & 24.76\% & 1.70\% & 0.53 $\pm$ 1.22 & 0.0403 \\
+Prediction Only & 4.10 $\pm$ 6.07 & 10.12 $\pm$ 16.70 & 5.56 $\pm$ 10.66 & 23.99\% & 1.81\% & 0.60 $\pm$ 1.32 & 0.0000 \\
+Reactive Threshold & 4.10 $\pm$ 6.07 & 10.12 $\pm$ 16.70 & 5.56 $\pm$ 10.66 & 23.99\% & 1.81\% & 0.60 $\pm$ 1.32 & 0.0000 \\
+Semantic Only & 3.12 $\pm$ 3.38 & 8.66 $\pm$ 15.28 & 4.94 $\pm$ 8.68 & 23.98\% & 0.79\% & 0.38 $\pm$ 0.80 & 0.1013 \\
+Static Slicing & 4.10 $\pm$ 6.07 & 10.12 $\pm$ 16.70 & 5.56 $\pm$ 10.66 & 23.99\% & 1.81\% & 0.60 $\pm$ 1.32 & 0.0000 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

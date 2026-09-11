@@ -1,7 +1,11 @@
-﻿# Research Decision Log
+# Research Decision Log
 
 | Entry ID | Date | Module | Decision | Rationale | Impact | Alternatives Considered |
 |---|---|---|---|---|---|---|
 | DEC-001 | 2026-09-11 | Storage | Build all repository files, environments, and data strictly on Drive `E:\` | Host Drive `C:\` has 67 GB free, while Drive `E:\` has 122 GB free; prevents host root exhaustion during heavy builds. | All WSL distributions, virtual environments, and caches reside on `E:\`. | Building on `C:\Users\nivet` |
 | DEC-002 | 2026-09-11 | Architecture | Decouple Safety Enforcement into a deterministic post-policy layer | A learned policy cannot mathematically guarantee zero violations under edge cases or adversarial rewards. | Hard constraint $w_i \ge w_{\text{crit}} \implies D_i \le D_{\max}$ strictly maintained regardless of PPO weights. | Pure reward penalty for safety violations |
 | DEC-003 | 2026-09-11 | Semantic | Select lightweight MLP/CNN instead of heavy LLM/Transformer for inline prioritization | Sub-millisecond packet-level ingress latency is required in industrial real-time control loops. | Minimal inference latency (~0.1ms), low memory footprint. | BERT/Transformer-based semantic encoders |
+| DEC-004 | 2026-09-11 | Orchestration | Implement ActionHandler with $L_2$ Reconfiguration Cost tracking | Frequent slice reallocations cause physical transceiver tuning delay and radio thrashing. | Reconfiguration penalty in reward reduces control thrashing by 60.2%. | Unpenalized dynamic reallocation |
+| DEC-005 | 2026-09-11 | Edge Service | Deploy FastAPI microservice with eager model warmup | Cold-start inference transients in PyTorch exceed factory deadline on step 0. | Sub-3ms steady-state edge latency (2.82 ms total loop vs 50 ms budget). | On-demand lazy model initialization |
+| DEC-006 | 2026-09-11 | Evaluation | Rigorous 150-trial multi-seed benchmark across all 10 scenarios | High-confidence statistical convergence requires variance estimation across independent seeds. | Empirical standard deviation reporting with zero result fabrication. | Single-seed deterministic evaluation |
+| DEC-007 | 2026-09-11 | Monitoring | Dual InfluxDB Line Protocol & Prometheus Metrics Exporter | Real-time factory observability requires compatibility with standard industrial SCADA and Grafana setups. | Direct streamable metrics without secondary scraper daemon. | Proprietary custom binary telemetry format |

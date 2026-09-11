@@ -1,0 +1,100 @@
+ablation_id,ablation_name,scenario,seed,mean_latency_ms,p95_latency_ms,jitter_ms,packet_loss_ratio,sla_violation_rate,critical_latency_ms,reconfiguration_cost,safety_overrides,scheduler,p99_latency_ms,channel_utilization
+A0,Full CogniNet-6G (Proposed),scenario_B_congestion_burst,42,1.1727,1.56,0.2762,0.235953,0.0,0.0,0.039688,0,,,
+A0,Full CogniNet-6G (Proposed),scenario_B_congestion_burst,101,1.1758,1.57,0.2725,0.236017,0.0,0.0,0.035133,0,,,
+A0,Full CogniNet-6G (Proposed),scenario_B_congestion_burst,999,1.1653,1.54,0.275,0.259272,0.0,0.0,0.03262,0,,,
+A0,Full CogniNet-6G (Proposed),scenario_E_critical_safety,42,1.1963,2.03,0.3512,0.216242,0.0,1.3667,0.040406,2,,,
+A0,Full CogniNet-6G (Proposed),scenario_E_critical_safety,101,1.1978,2.041,0.3465,0.239807,0.0,1.3767,0.035664,2,,,
+A0,Full CogniNet-6G (Proposed),scenario_E_critical_safety,999,1.189,1.983,0.3327,0.263545,0.0,1.34,0.033368,2,,,
+A0,Full CogniNet-6G (Proposed),scenario_J_network_degradation,42,1.0918,1.15,0.2485,0.236132,0.0,0.0,0.042906,0,,,
+A0,Full CogniNet-6G (Proposed),scenario_J_network_degradation,101,1.085,1.1305,0.2493,0.248965,0.0,0.0,0.037926,0,,,
+A0,Full CogniNet-6G (Proposed),scenario_J_network_degradation,999,1.0835,1.13,0.2517,0.270235,0.0,0.0,0.035229,0,,,
+A1,w/o Safety Override Layer,scenario_B_congestion_burst,42,1.1727,1.56,0.2762,0.235953,0.0,0.0,0.039688,0,,,
+A1,w/o Safety Override Layer,scenario_B_congestion_burst,101,1.1758,1.57,0.2725,0.236017,0.0,0.0,0.035133,0,,,
+A1,w/o Safety Override Layer,scenario_B_congestion_burst,999,1.1653,1.54,0.275,0.259272,0.0,0.0,0.03262,0,,,
+A1,w/o Safety Override Layer,scenario_E_critical_safety,42,1.1953,2.03,0.348,0.216242,0.0,1.8163,0.03955,0,,,
+A1,w/o Safety Override Layer,scenario_E_critical_safety,101,1.1973,2.0405,0.3433,0.239807,0.0,1.8368,0.035075,0,,,
+A1,w/o Safety Override Layer,scenario_E_critical_safety,999,1.1882,1.9825,0.3297,0.263545,0.0,1.767,0.032502,0,,,
+A1,w/o Safety Override Layer,scenario_J_network_degradation,42,1.0918,1.15,0.2485,0.236132,0.0,0.0,0.042906,0,,,
+A1,w/o Safety Override Layer,scenario_J_network_degradation,101,1.085,1.1305,0.2493,0.248965,0.0,0.0,0.037926,0,,,
+A1,w/o Safety Override Layer,scenario_J_network_degradation,999,1.0835,1.13,0.2517,0.270235,0.0,0.0,0.035229,0,,,
+A2,w/o Semantic Prioritization,scenario_B_congestion_burst,42,1.1687,1.541,0.2475,0.235953,0.0,0.0,0.004176,0,,,
+A2,w/o Semantic Prioritization,scenario_B_congestion_burst,101,1.1687,1.55,0.2413,0.236017,0.0,0.0,0.004462,0,,,
+A2,w/o Semantic Prioritization,scenario_B_congestion_burst,999,1.1605,1.5305,0.2515,0.259272,0.0,0.0,0.004374,0,,,
+A2,w/o Semantic Prioritization,scenario_E_critical_safety,42,1.19,2.0005,0.3195,0.216242,0.0,0.0,0.004849,0,,,
+A2,w/o Semantic Prioritization,scenario_E_critical_safety,101,1.1912,2.03,0.3002,0.239807,0.0,0.0,0.004554,0,,,
+A2,w/o Semantic Prioritization,scenario_E_critical_safety,999,1.1817,1.972,0.2948,0.263545,0.0,0.0,0.004672,0,,,
+A2,w/o Semantic Prioritization,scenario_J_network_degradation,42,1.0885,1.14,0.2263,0.236132,0.0,0.0,0.004563,0,,,
+A2,w/o Semantic Prioritization,scenario_J_network_degradation,101,1.0805,1.13,0.2252,0.248965,0.0,0.0,0.004402,0,,,
+A2,w/o Semantic Prioritization,scenario_J_network_degradation,999,1.0792,1.1205,0.226,0.270235,0.0,0.0,0.004112,0,,,
+A3,w/o Traffic Forecasting,scenario_B_congestion_burst,42,1.1728,1.56,0.2765,0.235953,0.0,0.0,0.039456,0,,,
+A3,w/o Traffic Forecasting,scenario_B_congestion_burst,101,1.1765,1.57,0.2713,0.236017,0.0,0.0,0.035028,0,,,
+A3,w/o Traffic Forecasting,scenario_B_congestion_burst,999,1.1657,1.5405,0.2733,0.259272,0.0,0.0,0.032311,0,,,
+A3,w/o Traffic Forecasting,scenario_E_critical_safety,42,1.1947,2.0205,0.3342,0.216242,0.0,1.3633,0.040094,2,,,
+A3,w/o Traffic Forecasting,scenario_E_critical_safety,101,1.1967,2.0405,0.334,0.239807,0.0,1.37,0.035353,2,,,
+A3,w/o Traffic Forecasting,scenario_E_critical_safety,999,1.1877,1.983,0.325,0.263545,0.0,1.34,0.033131,2,,,
+A3,w/o Traffic Forecasting,scenario_J_network_degradation,42,1.092,1.1405,0.2488,0.236132,0.0,0.0,0.042678,0,,,
+A3,w/o Traffic Forecasting,scenario_J_network_degradation,101,1.0852,1.1305,0.248,0.248965,0.0,0.0,0.037581,0,,,
+A3,w/o Traffic Forecasting,scenario_J_network_degradation,999,1.0838,1.13,0.2507,0.270235,0.0,0.0,0.035021,0,,,
+A4,Transformer Predictor Baseline,scenario_B_congestion_burst,42,1.1728,1.5505,0.2843,0.235953,0.0,0.0,0.037943,0,,,
+A4,Transformer Predictor Baseline,scenario_B_congestion_burst,101,1.176,1.5605,0.2843,0.236017,0.0,0.0,0.033715,0,,,
+A4,Transformer Predictor Baseline,scenario_B_congestion_burst,999,1.1657,1.54,0.2827,0.259272,0.0,0.0,0.031281,0,,,
+A4,Transformer Predictor Baseline,scenario_E_critical_safety,42,1.1982,2.04,0.3712,0.216242,0.0,1.37,0.038924,2,,,
+A4,Transformer Predictor Baseline,scenario_E_critical_safety,101,1.201,2.06,0.3638,0.239807,0.0,1.3867,0.034741,2,,,
+A4,Transformer Predictor Baseline,scenario_E_critical_safety,999,1.19,1.983,0.3467,0.263545,0.0,1.34,0.032068,2,,,
+A4,Transformer Predictor Baseline,scenario_J_network_degradation,42,1.0928,1.1405,0.2565,0.236132,0.0,0.0,0.041403,0,,,
+A4,Transformer Predictor Baseline,scenario_J_network_degradation,101,1.086,1.14,0.262,0.248965,0.0,0.0,0.036792,0,,,
+A4,Transformer Predictor Baseline,scenario_J_network_degradation,999,1.0855,1.13,0.2613,0.270235,0.0,0.0,0.03407,0,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_B_congestion_burst,42,1.1727,1.56,0.2762,0.235953,0.0,0.0,0.039688,0,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_B_congestion_burst,101,1.1758,1.57,0.2725,0.236017,0.0,0.0,0.035133,0,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_B_congestion_burst,999,1.1653,1.54,0.275,0.259272,0.0,0.0,0.03262,0,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_E_critical_safety,42,1.1963,2.03,0.3512,0.216242,0.0,1.3667,0.040406,2,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_E_critical_safety,101,1.1978,2.041,0.3465,0.239807,0.0,1.3767,0.035664,2,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_E_critical_safety,999,1.189,1.983,0.3327,0.263545,0.0,1.34,0.033368,2,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_J_network_degradation,42,1.0918,1.15,0.2485,0.236132,0.0,0.0,0.042906,0,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_J_network_degradation,101,1.085,1.1305,0.2493,0.248965,0.0,0.0,0.037926,0,,,
+A5,w/o Digital Twin Rolling Buffer,scenario_J_network_degradation,999,1.0835,1.13,0.2517,0.270235,0.0,0.0,0.035229,0,,,
+A6,w/o Reconfiguration Penalty,scenario_B_congestion_burst,42,1.1727,1.56,0.2762,0.235953,0.0,0.0,0.039688,0,,,
+A6,w/o Reconfiguration Penalty,scenario_B_congestion_burst,101,1.1758,1.57,0.2725,0.236017,0.0,0.0,0.035133,0,,,
+A6,w/o Reconfiguration Penalty,scenario_B_congestion_burst,999,1.1653,1.54,0.275,0.259272,0.0,0.0,0.03262,0,,,
+A6,w/o Reconfiguration Penalty,scenario_E_critical_safety,42,1.1963,2.03,0.3512,0.216242,0.0,1.3667,0.040406,2,,,
+A6,w/o Reconfiguration Penalty,scenario_E_critical_safety,101,1.1978,2.041,0.3465,0.239807,0.0,1.3767,0.035664,2,,,
+A6,w/o Reconfiguration Penalty,scenario_E_critical_safety,999,1.189,1.983,0.3327,0.263545,0.0,1.34,0.033368,2,,,
+A6,w/o Reconfiguration Penalty,scenario_J_network_degradation,42,1.0918,1.15,0.2485,0.236132,0.0,0.0,0.042906,0,,,
+A6,w/o Reconfiguration Penalty,scenario_J_network_degradation,101,1.085,1.1305,0.2493,0.248965,0.0,0.0,0.037926,0,,,
+A6,w/o Reconfiguration Penalty,scenario_J_network_degradation,999,1.0835,1.13,0.2517,0.270235,0.0,0.0,0.035229,0,,,
+A7,Fallback: Static Slicing,scenario_B_congestion_burst,42,1.1655,1.541,0.2275,0.235953,0.0,0.0,0.0,0,Static Slicing,1.5682,0.0025
+A7,Fallback: Static Slicing,scenario_B_congestion_burst,101,1.1665,1.5505,0.2203,0.236017,0.0,0.0,0.0,0,Static Slicing,1.5641,0.0025
+A7,Fallback: Static Slicing,scenario_B_congestion_burst,999,1.1587,1.54,0.2313,0.259272,0.0,0.0,0.0,0,Static Slicing,1.5541,0.0025
+A7,Fallback: Static Slicing,scenario_E_critical_safety,42,1.1833,1.9805,0.2673,0.216242,0.0,1.845,0.0,0,Static Slicing,1.9941,0.0022
+A7,Fallback: Static Slicing,scenario_E_critical_safety,101,1.1865,2.0105,0.2587,0.239807,0.0,1.88,0.0,0,Static Slicing,2.0241,0.0022
+A7,Fallback: Static Slicing,scenario_E_critical_safety,999,1.1772,1.9715,0.2673,0.263545,0.0,1.84,0.0,0,Static Slicing,2.0682,0.0022
+A7,Fallback: Static Slicing,scenario_J_network_degradation,42,1.0813,1.13,0.2122,0.156122,0.0,0.0,0.0,0,Static Slicing,1.1441,0.001
+A7,Fallback: Static Slicing,scenario_J_network_degradation,101,1.0815,1.13,0.2065,0.175225,0.0,0.0,0.0,0,Static Slicing,1.1523,0.001
+A7,Fallback: Static Slicing,scenario_J_network_degradation,999,1.0745,1.1105,0.217,0.193,0.0,0.0,0.0,0,Static Slicing,1.1241,0.001
+A8,Fallback: Reactive Threshold,scenario_B_congestion_burst,42,1.1655,1.541,0.2275,0.235953,0.0,0.0,0.0,0,Reactive Threshold,1.5682,0.0025
+A8,Fallback: Reactive Threshold,scenario_B_congestion_burst,101,1.1665,1.5505,0.2203,0.236017,0.0,0.0,0.0,0,Reactive Threshold,1.5641,0.0025
+A8,Fallback: Reactive Threshold,scenario_B_congestion_burst,999,1.1587,1.54,0.2313,0.259272,0.0,0.0,0.0,0,Reactive Threshold,1.5541,0.0025
+A8,Fallback: Reactive Threshold,scenario_E_critical_safety,42,1.1833,1.9805,0.2673,0.216242,0.0,1.845,0.0,0,Reactive Threshold,1.9941,0.0022
+A8,Fallback: Reactive Threshold,scenario_E_critical_safety,101,1.1865,2.0105,0.2587,0.239807,0.0,1.88,0.0,0,Reactive Threshold,2.0241,0.0022
+A8,Fallback: Reactive Threshold,scenario_E_critical_safety,999,1.1772,1.9715,0.2673,0.263545,0.0,1.84,0.0,0,Reactive Threshold,2.0682,0.0022
+A8,Fallback: Reactive Threshold,scenario_J_network_degradation,42,1.0813,1.13,0.2122,0.156122,0.0,0.0,0.0,0,Reactive Threshold,1.1441,0.001
+A8,Fallback: Reactive Threshold,scenario_J_network_degradation,101,1.0815,1.13,0.2065,0.175225,0.0,0.0,0.0,0,Reactive Threshold,1.1523,0.001
+A8,Fallback: Reactive Threshold,scenario_J_network_degradation,999,1.0745,1.1105,0.217,0.193,0.0,0.0,0.0,0,Reactive Threshold,1.1241,0.001
+A9,Constrained Radio (50 Mbps),scenario_B_congestion_burst,42,1.5925,2.351,0.478,0.235953,0.0,0.0,0.03938,0,,,
+A9,Constrained Radio (50 Mbps),scenario_B_congestion_burst,101,1.6002,2.371,0.4885,0.236017,0.0,0.0,0.034813,0,,,
+A9,Constrained Radio (50 Mbps),scenario_B_congestion_burst,999,1.5815,2.3405,0.4812,0.259272,0.0,0.0,0.032432,0,,,
+A9,Constrained Radio (50 Mbps),scenario_E_critical_safety,42,1.6592,3.312,0.668,0.216242,0.0,2.4133,0.045222,2,,,
+A9,Constrained Radio (50 Mbps),scenario_E_critical_safety,101,1.6628,3.3615,0.6693,0.239807,0.0,2.42,0.04056,2,,,
+A9,Constrained Radio (50 Mbps),scenario_E_critical_safety,999,1.6512,3.2165,0.6362,0.263545,0.0,2.3067,0.038286,2,,,
+A9,Constrained Radio (50 Mbps),scenario_J_network_degradation,42,1.4293,1.51,0.42,0.236132,0.0,0.0,0.042884,0,,,
+A9,Constrained Radio (50 Mbps),scenario_J_network_degradation,101,1.4185,1.49,0.4267,0.248965,0.0,0.0,0.037892,0,,,
+A9,Constrained Radio (50 Mbps),scenario_J_network_degradation,999,1.4215,1.5,0.4278,0.270235,0.0,0.0,0.035192,0,,,
+A10,High-Density Fleet (20 Robots),scenario_B_congestion_burst,42,1.5728,2.131,0.6415,0.235383,0.0,0.0,0.058742,0,,,
+A10,High-Density Fleet (20 Robots),scenario_B_congestion_burst,101,1.5763,2.132,0.67,0.245755,0.0,0.0,0.061106,0,,,
+A10,High-Density Fleet (20 Robots),scenario_B_congestion_burst,999,1.5633,2.1305,0.6653,0.263492,0.0,0.0,0.05787,0,,,
+A10,High-Density Fleet (20 Robots),scenario_E_critical_safety,42,1.6603,3.3125,0.7162,0.239367,0.0,2.2233,0.059615,2,,,
+A10,High-Density Fleet (20 Robots),scenario_E_critical_safety,101,1.6657,3.2515,0.8057,0.253702,0.0,2.2167,0.061498,2,,,
+A10,High-Density Fleet (20 Robots),scenario_E_critical_safety,999,1.6622,3.251,0.8123,0.262597,0.0,2.1733,0.058829,2,,,
+A10,High-Density Fleet (20 Robots),scenario_J_network_degradation,42,1.4493,1.52,0.5867,0.246207,0.0,0.0,0.060315,0,,,
+A10,High-Density Fleet (20 Robots),scenario_J_network_degradation,101,1.4493,1.4905,0.6472,0.246693,0.0,0.0,0.06292,0,,,
+A10,High-Density Fleet (20 Robots),scenario_J_network_degradation,999,1.4475,1.5,0.6653,0.262163,0.0,0.0,0.058932,0,,,

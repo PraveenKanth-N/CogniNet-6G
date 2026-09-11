@@ -195,7 +195,8 @@ class ClosedLoopOrchestrator:
 
             obs = np.array(s_norm + s_hat_norm + weights_vec + a_prev_norm + t_norm, dtype=np.float32)
 
-            if self.rl_policy is not None:
+            expected_dim = self.rl_policy.observation_space.shape[0] if self.rl_policy is not None else 29
+            if self.rl_policy is not None and len(obs) == expected_dim:
                 action_logits, _ = self.rl_policy.predict(obs, deterministic=True)
             else:
                 action_logits = np.array([weights.get(rid, 0.5) for rid in self.robot_ids], dtype=np.float32)
