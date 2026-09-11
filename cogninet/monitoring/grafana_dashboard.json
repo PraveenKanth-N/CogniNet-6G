@@ -1,0 +1,67 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "liveNow": true,
+  "panels": [
+    {
+      "title": "Mean Network Latency vs SLA Bound",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "targets": [
+        {
+          "query": "from(bucket: \"cogninet\") |> range(start: v.timeRangeStart) |> filter(fn: (r) => r._measurement == \"cogninet_system_metrics\" and r._field == \"latency_ms\")"
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Slicing Bandwidth Distribution",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "targets": [
+        {
+          "query": "from(bucket: \"cogninet\") |> range(start: v.timeRangeStart) |> filter(fn: (r) => r._measurement == \"cogninet_robot_metrics\" and r._field == \"bandwidth_mbps\")"
+        }
+      ]
+    },
+    {
+      "title": "Control Loop Timing Breakdown (< 50ms Real-Time Budget)",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+      "targets": [
+        {
+          "query": "from(bucket: \"cogninet\") |> range(start: v.timeRangeStart) |> filter(fn: (r) => r._measurement == \"cogninet_system_metrics\" and r._field == \"total_loop_ms\")"
+        }
+      ]
+    },
+    {
+      "title": "Safety Override Interventions & Packet Loss",
+      "type": "timeseries",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+      "targets": [
+        {
+          "query": "from(bucket: \"cogninet\") |> range(start: v.timeRangeStart) |> filter(fn: (r) => r._measurement == \"cogninet_system_metrics\" and (r._field == \"safety_override_applied\" or r._field == \"packet_loss_ratio\"))"
+        }
+      ]
+    }
+  ],
+  "refresh": "1s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": ["6g", "digital-twin", "robotics", "cogninet"],
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": ["500ms", "1s", "5s"]
+  },
+  "timezone": "browser",
+  "title": "CogniNet-6G Real-Time Digital Twin Dashboard",
+  "version": 1
+}
