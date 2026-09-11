@@ -1,0 +1,11 @@
+{
+  "total_timesteps": 12000,
+  "mean_eval_reward": -0.0712,
+  "safety_overrides_applied": 0,
+  "final_state": [
+    1.05,
+    0.17,
+    0.1579,
+    0.001
+  ]
+}
