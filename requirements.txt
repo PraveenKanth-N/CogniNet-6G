@@ -1,0 +1,35 @@
+﻿# Core Deep Learning & Reinforcement Learning
+torch>=2.2.0
+torchvision>=0.17.0
+stable-baselines3>=2.3.0
+gymnasium>=0.29.1
+
+# Scientific Computing & Data Processing
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.12.0
+scikit-learn>=1.4.0
+pyyaml>=6.0.1
+pydantic>=2.6.0
+
+# Plotting & Visualization (Publication Grade)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Digital Twin, Serving & Messaging
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+redis>=5.0.0
+requests>=2.31.0
+httpx>=0.27.0
+websockets>=12.0
+
+# Monitoring & Time Series
+influxdb-client>=1.40.0
+
+# Testing, Quality & Benchmarking
+pytest>=8.0.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+ruff>=0.3.0
+mypy>=1.9.0

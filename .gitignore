@@ -1,0 +1,67 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+cogninet-env/
+
+# ROS2 build artifacts
+install/
+log/
+
+# ns-3 build artifacts
+sim/ns3/build/
+sim/ns3/cmake-cache/
+
+# Experiment results and checkpoints
+*.pt
+*.pth
+*.onnx
+*.pkl
+datasets/raw/*.pcap
+datasets/raw/*.bag
+results/raw/*.csv
+results/raw/*.parquet
+results/raw/*.jsonl
+
+# InfluxDB / Redis data
+docker_data/
+
+# IDEs and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,35 @@
+﻿# Baseline Configurations for Comparative Benchmarking
+
+static_slicing:
+  name: "Static Resource Allocation"
+  description: "Fixed equal partition of total capacity R_max across active robots"
+  allocation_strategy: "uniform"
+  shares:
+    default_mbps_per_robot: 10.0  # 100 Mbps / 10 robots
+
+reactive_threshold:
+  name: "Reactive Threshold Orchestration"
+  description: "Threshold-triggered reallocation (Status Quo in industrial controllers)"
+  thresholds:
+    latency_trigger_ms: 50.0      # Trigger reallocation if latency exceeds this
+    packet_loss_trigger: 0.02     # Trigger reallocation if packet loss exceeds 2%
+    cooldown_intervals: 2         # Prevent immediate re-triggering
+  action_step:
+    boost_congested_factor: 1.5   # Increase congested robot slice by 50%
+    throttle_idle_factor: 0.85    # Reduce idle robot slice
+
+semantic_only:
+  name: "Semantic Heuristic Allocation"
+  description: "Allocates bandwidth proportional to message priority weights without prediction or RL"
+
+prediction_only:
+  name: "Predictive Heuristic Allocation"
+  description: "Allocates bandwidth proportional to predicted load without semantic weighting"
+
+rl_no_prediction:
+  name: "PPO without Predictive State"
+  description: "PPO agent observing current state S(t) rather than predicted state S(t+Delta)"
+
+rl_no_semantics:
+  name: "PPO without Semantic Priority"
+  description: "PPO agent observing network state only without message importance weights"

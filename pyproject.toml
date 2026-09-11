@@ -1,0 +1,58 @@
+﻿[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cogninet-6g"
+version = "0.1.0"
+description = "An AI-Native Closed-Loop Digital Twin Framework for Predictive Semantic Network Orchestration in Private 6G Industrial Robot Networks"
+readme = "README.md"
+authors = [
+    { name = "Dharma S", email = "dharma.s2023@vitstudent.ac.in" },
+    { name = "Kishore B", email = "kishore.b2023@vitstudent.ac.in" },
+    { name = "Praveen Kanth N", email = "praveenkanth.n2023@vitstudent.ac.in" }
+]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.2.0",
+    "stable-baselines3>=2.3.0",
+    "gymnasium>=0.29.1",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "scipy>=1.12.0",
+    "scikit-learn>=1.4.0",
+    "pyyaml>=6.0.1",
+    "pydantic>=2.6.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.28.0",
+    "redis>=5.0.0",
+    "influxdb-client>=1.40.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "ruff>=0.3.0",
+    "mypy>=1.9.0"
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=cogninet --cov-report=term-missing"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

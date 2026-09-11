@@ -1,0 +1,59 @@
+﻿# CogniNet-6G Simulation Configuration
+# Canonical Parameters for Closed-Loop Digital Twin Orchestration
+
+fleet:
+  num_robots: 10
+  robot_ids: ["r01", "r02", "r03", "r04", "r05", "r06", "r07", "r08", "r09", "r10"]
+  types: ["AMR", "AGV"]
+
+timing:
+  delta_t: 0.5            # Control interval in seconds (500 ms)
+  forecast_horizon: 2.0   # Forecast lookahead Delta in seconds
+  history_window_k: 10    # Past observation steps k (5 seconds of history)
+
+network:
+  r_max_mbps: 100.0       # Total available wireless capacity in Mbps
+  carrier_freq_ghz: 28.0  # mmWave / sub-THz carrier frequency
+  bandwidth_mhz: 100.0    # Channel bandwidth
+  base_stations: 2
+  sla_latency_threshold_ms: 45.0  # General traffic SLA threshold
+  sla_packet_loss_max: 0.02       # Max acceptable packet loss ratio
+
+safety:
+  w_crit: 0.85            # Critical semantic importance threshold
+  d_max_ms: 10.0          # Hard maximum latency guarantee for critical messages
+  enforce_strict: true    # Deterministic post-policy feasibility projection
+
+reward_weights:
+  alpha: 0.35             # Latency penalty weight
+  beta: 0.25              # Packet loss penalty weight
+  eta: 0.20               # SLA compliance reward weight
+  zeta: 0.10              # Resource utilization reward weight
+  lambda_reconfig: 0.10   # Reconfiguration thrashing penalty weight
+
+models:
+  predictor:
+    type: "lstm"          # "lstm" (primary) or "transformer" (comparison)
+    input_dim: 4          # [L, J, P_L, U]
+    hidden_dim: 64
+    num_layers: 2
+    dropout: 0.1
+    learning_rate: 0.001
+  semantic:
+    type: "mlp"
+    metadata_dim: 8       # [task_type, urgency, src_id, payload_size, safety_flag, ...]
+    num_classes: 4        # Critical (0.95), High (0.75), Medium (0.50), Low (0.15)
+    hidden_dim: 32
+  ppo:
+    learning_rate: 0.0003
+    n_steps: 2048
+    batch_size: 64
+    n_epochs: 10
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    ent_coef: 0.01
+
+logging:
+  experiment_dir: "results/raw"
+  random_seed: 42

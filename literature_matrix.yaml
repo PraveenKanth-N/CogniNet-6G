@@ -1,0 +1,95 @@
+﻿# Master Literature Review Traceability Matrix (30 Papers, 2025-2026)
+# CogniNet-6G Research Baseline
+papers:
+  - id: 1
+    title: "DT-RL: A Digital Twin-Driven Reinforcement Learning Framework for Proactive Slice Admission and Predictive QoS Assurance in 6G Networks"
+    authors: "Fallahi, Ghaffari, Zamanifar, Boroujeni"
+    year: 2026
+    source: "Nature - Scientific Reports"
+    doi: "10.1038/s41598-026-65587-1"
+    technology: "Digital Twin + Reinforcement Learning"
+    methodology: "Twin-assisted RL agent admits network slices ahead of time and predicts QoS drops"
+    key_finding: "Improves QoS assurance and slice admission accuracy over reactive baselines"
+    limitation: "Built for generic C-RAN slicing, not robot-fleet control or semantic traffic"
+    relevance: "Confirms that a digital twin can feed useful state information into an RL admission policy"
+
+  - id: 2
+    title: "Federated Learning-Driven Digital Twin Framework for Adaptive Resource Management in 6G Edge Networks"
+    authors: "Rahmati, Rahmati"
+    year: 2026
+    source: "Springer - J. Electrical Systems and Info. Tech."
+    doi: "10.1186/s43067-025-00285-y"
+    technology: "Digital Twin + Federated Learning"
+    methodology: "Edge nodes train locally and share model updates while the twin tracks resource state"
+    key_finding: "Better resource efficiency and latency than a centrally trained model"
+    limitation: "Federated training rounds add convergence delay and communication cost"
+    relevance: "Useful reference for keeping robot data local while still learning a shared policy"
+
+  - id: 3
+    title: "6G-Enabled Digital Twin-Based Smart Warehouse for Supply Chain of Things"
+    authors: "Erel-Ozcevik, Ozcevik, Bozkaya-Aras, Bilen"
+    year: 2026
+    source: "Springer - Computing"
+    doi: "10.1007/s00607-026-01668-3"
+    technology: "Digital Twin + Genetic Algorithm + Age of Information"
+    methodology: "A warehouse twin is optimized with a genetic algorithm for storage assignment"
+    key_finding: "Lower energy use and shorter operating time for warehouse robots"
+    limitation: "Optimizes storage location, not wireless resource orchestration"
+    relevance: "Good evidence that a 6G digital twin can support real-time industrial decisions"
+
+  - id: 4
+    title: "Federated Learning for Dynamic Resource Allocation in 6G Network Slicing"
+    authors: "Krishnamoorthy, Gireesh Babu, Gite, Khadidos, Khadidos, Mirza, Selvarajan"
+    year: 2026
+    source: "Springer - Wireless Personal Communications"
+    doi: "10.1007/s11277-026-11943-3"
+    technology: "Hierarchical Federated Learning + Reinforcement Learning"
+    methodology: "Slices are allocated dynamically using federated RL trained on a wireless slicing dataset"
+    key_finding: "Better accuracy, jitter and packet loss than FedAvg and FedProx baselines"
+    limitation: "Relies on an offline dataset rather than a live robot-network twin"
+    relevance: "Strong baseline for comparing scheduler against federated-RL slicing"
+
+  - id: 13
+    title: "OREO: Open RAN Energy Optimisation via Deep Reinforcement Learning for 6G Networks"
+    authors: "Qazzaz, Salama, Hafeez, Zaidi"
+    year: 2026
+    source: "IEEE Open Journal of the Communications Society"
+    technology: "O-RAN + PPO + rApp/xApp"
+    methodology: "A PPO-based rApp adjusts radio unit activation to save energy while holding QoS steady"
+    key_finding: "Notable energy savings with limited impact on outage or handovers"
+    limitation: "Targets energy and radio-unit control, not robot traffic semantics"
+    relevance: "Good proof that PPO fits practical O-RAN closed-loop control"
+
+  - id: 14
+    title: "RSLAQ: A Robust SLA-Driven 6G O-RAN QoS xApp Using Deep Reinforcement Learning"
+    authors: "Yungaicela-Naula, Sharma, Scott-Hayward"
+    year: 2026
+    source: "IEEE Transactions on Mobile Computing"
+    technology: "O-RAN + Deep RL + xApp + Network Slicing"
+    methodology: "A DRL xApp allocates RAN resources while enforcing SLA constraints directly in the reward"
+    key_finding: "Higher SLA adherence and reliability compared to threshold-based xApps"
+    limitation: "No digital twin and no robot-task semantics in the state representation"
+    relevance: "Key reference for designing our RL reward function and SLA penalty terms"
+
+  - id: 21
+    title: "Semantic Communication Based on Slot Attention for MIMO Transmission in 6G Smart Factories"
+    authors: "Listed in publisher record"
+    year: 2026
+    source: "MDPI - Sensors"
+    doi: "10.3390/s26082456"
+    technology: "Semantic Communication + Slot Attention + MIMO"
+    methodology: "Slot attention keeps task-relevant information intact while transmitting over MIMO channels"
+    key_finding: "Higher semantic fidelity and reconstruction accuracy under bandwidth limits"
+    limitation: "Semantic encoding adds compute cost and is domain-specific"
+    relevance: "Direct justification for semantic prioritization in smart factories"
+
+  - id: 30
+    title: "AI-Driven Digital Twins: Optimizing 5G/6G Network Slicing With Non-Terrestrial Networks"
+    authors: "Ali, Arslan"
+    year: 2026
+    source: "IEEE Wireless Communications Letters"
+    technology: "Digital Twin + Deep Reinforcement Learning (DDPG)"
+    methodology: "A digital twin paired with DDPG optimizes dynamic slicing decisions"
+    key_finding: "Improved resource allocation and QoS compared to static slicing"
+    limitation: "NTN mobility and channel assumptions differ from a fixed private industrial network"
+    relevance: "Strong baseline evidence for combining a digital twin with deep RL for slicing"
