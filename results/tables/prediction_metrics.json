@@ -1,0 +1,17 @@
+{
+  "dataset_samples": 470,
+  "k_history_steps": 10,
+  "forecast_horizon_seconds": 2.0,
+  "lstm_primary": {
+    "mse": 0.2166,
+    "rmse": 0.4654,
+    "mae": 0.3317,
+    "r2": -69.4086
+  },
+  "transformer_comparison": {
+    "mse": 0.0325,
+    "rmse": 0.1802,
+    "mae": 0.1046,
+    "r2": -9.5576
+  }
+}
