@@ -1,0 +1,37 @@
+{
+  "dataset_samples": 6000,
+  "test_accuracy": 1.0,
+  "weighted_precision": 1.0,
+  "weighted_recall": 1.0,
+  "weighted_f1": 1.0,
+  "critical_recall": 1.0,
+  "critical_false_negative_rate": 0.0,
+  "confusion_matrix": [
+    [
+      220,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      202,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      240,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      238
+    ]
+  ],
+  "inference_latency_microseconds": 278.79,
+  "inference_latency_ms": 0.2788
+}
