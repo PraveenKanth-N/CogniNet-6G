@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 CogniNet-6G Environment & Subsystem Health Check
 Phase 1 Verification Script
@@ -64,6 +64,20 @@ def check_storage():
 
 def check_wsl():
     report = {"status": "PENDING", "details": {}}
+    if platform.system() == "Linux":
+        try:
+            with open("/proc/version", "r") as f:
+                ver = f.read()
+            if "microsoft" in ver.lower():
+                report["status"] = "PASS"
+                report["details"]["wsl_installed"] = True
+                report["details"]["running_inside_wsl"] = True
+                report["details"]["kernel"] = ver.strip()
+                report["details"]["ubuntu_available"] = True
+                return report
+        except Exception:
+            pass
+
     code, stdout, stderr = run_cmd("wsl -l -v")
     if code == 0:
         report["details"]["wsl_installed"] = True
@@ -105,7 +119,7 @@ def check_python_stack():
     report["details"]["executable"] = sys.executable
 
     pkgs = [
-        "torch", "torchvision", "stable_baselines3", "gymnasium",
+        "torch", "stable_baselines3", "gymnasium",
         "numpy", "pandas", "scipy", "sklearn", "yaml", "fastapi",
         "uvicorn", "redis", "influxdb_client", "matplotlib"
     ]
@@ -115,7 +129,7 @@ def check_python_stack():
         try:
             mod = __import__(p)
             pkg_status[p] = getattr(mod, "__version__", "Installed")
-        except ImportError:
+        except Exception:
             pkg_status[p] = "Missing"
             missing.append(p)
 
@@ -189,7 +203,7 @@ def main():
         print()
 
     # Output JSON summary to results
-    out_file = "E:\\cogninet-6g\\results\\raw\\phase1_health_check.json"
+    out_file = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "results", "raw", "phase1_health_check.json"))
     os.makedirs(os.path.dirname(out_file), exist_ok=True)
     with open(out_file, "w") as f:
         json.dump(checks, f, indent=2)

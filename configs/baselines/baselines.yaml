@@ -1,4 +1,4 @@
-﻿# Baseline Configurations for Comparative Benchmarking
+# Baseline Configurations for Comparative Benchmarking
 
 static_slicing:
   name: "Static Resource Allocation"

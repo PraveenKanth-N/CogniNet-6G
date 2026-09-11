@@ -1,0 +1,66 @@
+{
+  "Storage (Drive E:)": {
+    "status": "PASS",
+    "details": {
+      "current_working_dir": "/mnt/e/cogninet-6g",
+      "target_drive_verified": true,
+      "drive_e_total_gb": 122.07,
+      "drive_e_free_gb": 103.81
+    }
+  },
+  "WSL2 Subsystem": {
+    "status": "PASS",
+    "details": {
+      "wsl_installed": true,
+      "running_inside_wsl": true,
+      "kernel": "Linux version 6.6.87.2-microsoft-standard-WSL2 (root@439a258ad544) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025",
+      "ubuntu_available": true
+    }
+  },
+  "Docker Engine": {
+    "status": "WARNING",
+    "details": {
+      "docker_cli": "Not found",
+      "daemon_running": false,
+      "note": "Docker Desktop is installed but daemon is stopped. Start Docker Desktop when containers are needed."
+    }
+  },
+  "Hardware Acceleration (GPU)": {
+    "status": "PASS",
+    "details": {
+      "nvidia_smi": "NVIDIA GeForce MX450, 581.83, 2048 MiB",
+      "gpu_detected": true
+    }
+  },
+  "Python Stack": {
+    "status": "PASS",
+    "details": {
+      "python_version": "3.10.12",
+      "executable": "/root/cogninet-env/bin/python",
+      "packages": {
+        "torch": "2.14.0+cu130",
+        "stable_baselines3": "2.9.0",
+        "gymnasium": "1.3.0",
+        "numpy": "2.2.6",
+        "pandas": "2.3.3",
+        "scipy": "1.15.3",
+        "sklearn": "1.7.2",
+        "yaml": "6.0.3",
+        "fastapi": "0.141.1",
+        "uvicorn": "0.52.4",
+        "redis": "8.1.0",
+        "influxdb_client": "1.50.0",
+        "matplotlib": "3.10.9"
+      }
+    }
+  },
+  "Robotics & Network Simulators": {
+    "status": "PENDING",
+    "details": {
+      "ros2_host": false,
+      "gazebo_host": false,
+      "ns3_installed": false,
+      "note": "ROS2, Gazebo, and ns-3 are Linux-native packages to be built inside WSL2 Ubuntu on Drive E:."
+    }
+  }
+}

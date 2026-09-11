@@ -1,4 +1,4 @@
-﻿"""
+"""
 Unit tests for CogniNet-6G Phase 1 Scaffolding and Environment.
 Validates repository structure, YAML configurations, and mathematical parameters.
 """
