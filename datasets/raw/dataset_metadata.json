@@ -1,0 +1,98 @@
+{
+  "dataset_version": "1.0.0",
+  "random_seed": 42,
+  "delta_t": 0.5,
+  "r_max_mbps": 100.0,
+  "scenarios": {
+    "scenario_A_normal": {
+      "file": "scenario_A_normal.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 1.08,
+      "mean_packet_loss": 0.2361,
+      "mean_utilization": 0.001,
+      "sla_satisfaction_pct": 0.0
+    },
+    "scenario_B_congestion_burst": {
+      "file": "scenario_B_congestion_burst.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 1.17,
+      "mean_packet_loss": 0.236,
+      "mean_utilization": 0.002,
+      "sla_satisfaction_pct": 0.0
+    },
+    "scenario_C_camera_inspection": {
+      "file": "scenario_C_camera_inspection.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 21.14,
+      "mean_packet_loss": 0.2337,
+      "mean_utilization": 0.108,
+      "sla_satisfaction_pct": 0.0
+    },
+    "scenario_D_robot_convergence": {
+      "file": "scenario_D_robot_convergence.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 1.11,
+      "mean_packet_loss": 0.2366,
+      "mean_utilization": 0.002,
+      "sla_satisfaction_pct": 1.7
+    },
+    "scenario_E_critical_safety": {
+      "file": "scenario_E_critical_safety.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 1.18,
+      "mean_packet_loss": 0.2162,
+      "mean_utilization": 0.002,
+      "sla_satisfaction_pct": 0.0
+    },
+    "scenario_F_mixed_traffic": {
+      "file": "scenario_F_mixed_traffic.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 5.59,
+      "mean_packet_loss": 0.2342,
+      "mean_utilization": 0.021,
+      "sla_satisfaction_pct": 0.0
+    },
+    "scenario_G_repeated_bursts": {
+      "file": "scenario_G_repeated_bursts.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 1.38,
+      "mean_packet_loss": 0.2192,
+      "mean_utilization": 0.004,
+      "sla_satisfaction_pct": 1.7
+    },
+    "scenario_H_unexpected_surge": {
+      "file": "scenario_H_unexpected_surge.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 6.01,
+      "mean_packet_loss": 0.2341,
+      "mean_utilization": 0.085,
+      "sla_satisfaction_pct": 0.0
+    },
+    "scenario_I_robot_scaling": {
+      "file": "scenario_I_robot_scaling.csv",
+      "samples": 60,
+      "num_robots": 20,
+      "mean_latency_ms": 1.08,
+      "mean_packet_loss": 0.2361,
+      "mean_utilization": 0.001,
+      "sla_satisfaction_pct": 0.0
+    },
+    "scenario_J_network_degradation": {
+      "file": "scenario_J_network_degradation.csv",
+      "samples": 60,
+      "num_robots": 10,
+      "mean_latency_ms": 1.08,
+      "mean_packet_loss": 0.2355,
+      "mean_utilization": 0.001,
+      "sla_satisfaction_pct": 0.0
+    }
+  }
+}
