@@ -1,4 +1,4 @@
-﻿# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -61,7 +61,12 @@ docker_data/
 # IDEs and OS files
 .vscode/
 .idea/
-*.swp
-*.swo
-.DS_Store
-Thumbs.db
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/page_*.png
+paper/inspect_pdf.py
+paper/render_pages.py
