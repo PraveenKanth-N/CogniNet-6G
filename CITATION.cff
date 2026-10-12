@@ -1,4 +1,4 @@
-﻿cff-version: 1.2.0
+cff-version: 1.2.0
 message: "If you use this software in your research, please cite it as below."
 authors:
   - family-names: "S"
@@ -13,4 +13,4 @@ authors:
 title: "CogniNet-6G: An AI-Native Closed-Loop Digital Twin Framework for Predictive Semantic Network Orchestration in Private 6G Industrial Robot Networks"
 version: 0.1.0
 date-released: 2026-09-11
-url: "https://github.com/dharma-k-praveen/cogninet-6g"
+url: "https://github.com/PraveenKanth-N/CogniNet-6G"

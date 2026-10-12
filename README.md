@@ -23,10 +23,11 @@ Autonomous mobile robots (AMRs) and automated guided vehicles (AGVs) depend heav
 - **Institution:** School of Computer Science and Engineering, Vellore Institute of Technology (VIT)
 - **Course:** Technical Answers for Real World Problems (TARP), CSI3901
 - **Semester:** Fall Semester 2026–27
-- **Authors:**
-  - **Dharma S** (Reg. No: 23MIC0104)
-  - **Kishore B** (Reg. No: 23MIC0050)
-  - **Praveen Kanth N** (Reg. No: 23MIC0078)
+- **Faculty Supervisor:** Dr. Mohanasundaram R (`mohanasundaramr@vit.ac.in`)
+- **Core Contributors & Authors:**
+  - **Praveen Kanth N** ([@PraveenKanth-N](https://github.com/PraveenKanth-N)) – Reg: 23MIC0078 *(Semantic Classification MLP, Pre-Processing, System Architecture)*
+  - **Kishore B** ([@Kishore-B06](https://github.com/Kishore-B06)) – Reg: 23MIC0050 *(Bi-LSTM QoS Forecaster, PPO Reinforcement Learning Policy)*
+  - **Dharma S** – Reg: 23MIC0104 *(Digital Twin State Layer, ns-3 / ROS 2 Co-Simulation Pipeline)*
 
 ---
 
