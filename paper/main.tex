@@ -43,7 +43,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE]{\small\sffamily CogniNet-6G: AI-Native Closed-Loop Digital Twin Framework}
-\fancyhead[RO]{\small\sffamily S. Dharma, B. Kishore, N. Praveen Kanth, and R. Mohanasundaram}
+\fancyhead[RO]{\small\sffamily S. Dharma, B. Kishore, N. Praveen Kanth, R. Mohanasundaram, and D. M. Deepak Raj}
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -61,7 +61,7 @@
   \vspace*{-0.5em}
   {\LARGE\textbf{\sffamily CogniNet-6G: An AI-Native Closed-Loop Digital Twin Framework for Predictive Semantic Network Orchestration in Private 6G Industrial Robot Networks}\par}
   \vspace{1.0em}
-  {\large\sffamily \textbf{Dharma S}\textsuperscript{1} \quad\textbullet\quad \textbf{Kishore B}\textsuperscript{1} \quad\textbullet\quad \textbf{Praveen Kanth N}\textsuperscript{1} \quad\textbullet\quad \textbf{Mohanasundaram R}\textsuperscript{1,*}\par}
+  {\large\sffamily \textbf{Dharma S}\textsuperscript{1},\ \ \textbf{Kishore B}\textsuperscript{1},\ \ \textbf{Praveen Kanth N}\textsuperscript{1},\ \ \textbf{Mohanasundaram R}\textsuperscript{1,*},\ \ \textbf{Deepak Raj D M}\textsuperscript{1,*}\par}
   \vspace{0.5em}
   {\small\sffamily \textsuperscript{1}School of Computer Science and Engineering, Vellore Institute of Technology, Vellore 632014, Tamil Nadu, India\par}
   \vspace{1.2em}
@@ -70,7 +70,7 @@
   \begin{quote}
   \small
   \textbf{\sffamily Abstract}\quad
-  Autonomous mobile robots (AMRs) and automated guided vehicles (AGVs) operating in Industry 5.0 smart manufacturing environments impose stringent, heterogeneous communication requirements spanning sub-millisecond emergency-stop latency, high-bandwidth sensor telemetry, and reliable multi-robot mission coordination. Conventional reactive network management and syntactic best-effort slicing mechanisms exhibit severe degradation under heavy industrial traffic bursts, non-line-of-sight mmWave shadowing, and channel contention, triggering latency spikes that jeopardize physical human-robot collaborative safety. This article introduces \textbf{CogniNet-6G}, an AI-native closed-loop digital twin framework for predictive semantic network orchestration in private 6G industrial robot fleets. CogniNet-6G continuously maintains a synchronized cyber-physical digital twin of radio channels and robotic kinematic states, predicts future QoS degradation 2.0 seconds ahead using a bidirectional Long Short-Term Memory network, classifies packet importance via a lightweight sub-millisecond semantic priority engine, and adaptively allocates radio resources through a Proximal Policy Optimization (PPO) reinforcement learning agent governed by a deterministic safety projection operator ($\Pi_{\mathcal{C}}$). We rigorously evaluate CogniNet-6G across 150 independent trials spanning 9,000 discrete control steps across 10 operational stress scenarios combining discrete-event ns-3 28\,GHz mmWave 5G-LENA simulations with ROS2/Gazebo robotic dynamics. Experimental results confirm that CogniNet-6G achieves an emergency message delivery latency of $0.45 \pm 0.95$\,ms, guarantees 0.00\% safety SLA violations under extreme interference and structural blockage, reduces slice reconfiguration thrashing by 60.2\%, and executes within a 2.82\,ms computational edge budget, strictly satisfying the 10\,ms O-RAN Near-RT RIC operational constraint.\par
+  Autonomous mobile robots (AMRs) and automated guided vehicles (AGVs) operating in Industry 5.0 smart manufacturing environments impose stringent, heterogeneous communication requirements spanning sub-millisecond emergency-stop latency, high-bandwidth sensor telemetry, and reliable multi-robot mission coordination. Conventional reactive network management and syntactic best-effort slicing mechanisms exhibit severe degradation under heavy industrial traffic bursts, non-line-of-sight mmWave shadowing, and channel contention, triggering latency spikes that jeopardize physical human-robot collaborative safety. This article introduces CogniNet-6G, an AI-native closed-loop digital twin framework for predictive semantic network orchestration in private 6G industrial robot fleets. CogniNet-6G continuously maintains a synchronized cyber-physical digital twin of radio channels and robotic kinematic states, predicts future QoS degradation 2.0 seconds ahead using a bidirectional Long Short-Term Memory network, classifies packet importance via a lightweight sub-millisecond semantic priority engine, and adaptively allocates radio resources through a Proximal Policy Optimization (PPO) reinforcement learning agent governed by a deterministic safety projection operator ($\Pi_{\mathcal{C}}$). We rigorously evaluate CogniNet-6G across 150 independent trials spanning 9,000 discrete control steps across 10 operational stress scenarios combining discrete-event ns-3 28\,GHz mmWave 5G-LENA simulations with ROS2/Gazebo robotic dynamics. Experimental results confirm that CogniNet-6G achieves an emergency message delivery latency of $0.45 \pm 0.95$\,ms, guarantees 0.00\% safety SLA violations under extreme interference and structural blockage, reduces slice reconfiguration thrashing by 60.2\%, and executes within a 2.82\,ms computational edge budget, strictly satisfying the 10\,ms O-RAN Near-RT RIC operational constraint.\par
   \vspace{0.6em}
   \noindent\textbf{\sffamily Keywords}\quad 6G Networks $\cdot$ Digital Twin $\cdot$ Reinforcement Learning $\cdot$ Semantic Communication $\cdot$ Network Slicing $\cdot$ Industrial Robots (AGV/AMR) $\cdot$ AI-Native Orchestration $\cdot$ Private Networks $\cdot$ O-RAN $\cdot$ Predictive QoS
   \end{quote}
@@ -81,7 +81,7 @@
 
 % Footnote for author contact & affiliations
 \let\thefootnote\relax\footnotetext{
-\textsuperscript{*}Corresponding author: Mohanasundaram R (\texttt{mohanasundaramr@vit.ac.in}).\\
+\textsuperscript{*}Corresponding authors: Mohanasundaram R (\texttt{mohanasundaramr@vit.ac.in}) and Deepak Raj D M (\texttt{deepakraj.dm@vit.ac.in}).\\
 Dharma S (\texttt{dharma.s2023@vitstudent.ac.in}, Reg: 23MIC0104), Kishore B (\texttt{kishore.b2023@vitstudent.ac.in}, Reg: 23MIC0050), and Praveen Kanth N (\texttt{praveenkanth.n2023@vitstudent.ac.in}, Reg: 23MIC0078) contributed equally to this work.\\
 \textsuperscript{1}School of Computer Science and Engineering, Vellore Institute of Technology, Vellore 632014, Tamil Nadu, India.
 }
@@ -131,7 +131,7 @@ a(t-1), & \text{otherwise},
 where $\theta$ is an empirical threshold vector. Because $a(t)$ in Eq.~(\ref{eq:existing_reactive}) is a discontinuous step function triggered solely after a physical threshold violation has occurred, conventional industrial systems exhibit zero lookahead anticipation.
 
 \subsection{Research Objectives}
-To solve these challenges in an integrated, mathematically grounded framework, this work designs, implements, and empirically validates \textbf{CogniNet-6G}, guided by four primary research objectives:
+To solve these challenges in an integrated, mathematically grounded framework, this work designs, implements, and empirically validates CogniNet-6G, guided by four primary research objectives:
 \begin{itemize}
     \item \textbf{RO1 (Synchronized Cyber-Physical Digital Twin):} Design a high-fidelity co-simulation environment coupling mobile robot fleet kinematics (ROS2 Humble and Gazebo) with 3GPP 28\,GHz mmWave discrete-event radio channels (ns-3 v3.38), maintaining continuous synchronization via an active Digital Twin state layer.
     \item \textbf{RO2 (Predictive Semantic Decision Pipeline):} Synthesize an ultra-low latency LSTM neural forecaster that predicts QoS degradation across a 2.0\,s lookahead horizon, paired with a lightweight Multi-Layer Perceptron (MLP) semantic ingress classifier operating in under 0.3\,ms to assign dynamic packet priority weights.
@@ -677,7 +677,7 @@ While CogniNet-6G achieves outstanding performance, certain limitations define o
 
 \section*{Acknowledgements}
 \small
-\noindent This research was conducted under the Technical Answers for Real World Problems (TARP) project initiative (Course Code: CSI3901, Fall Semester 2026-27) at the School of Computer Science and Engineering, Vellore Institute of Technology, Vellore, Tamil Nadu, India. The authors express sincere gratitude to the faculty supervisor Dr. Mohanasundaram R for academic guidance and technical mentorship.
+\noindent This research was conducted under the Technical Answers for Real World Problems (TARP) project initiative (Course Code: CSI3901, Fall Semester 2026-27) at the School of Computer Science and Engineering, Vellore Institute of Technology, Vellore, Tamil Nadu, India. The authors express sincere gratitude to the faculty supervisors Dr. Mohanasundaram R and Dr. Deepak Raj D M for academic guidance and technical mentorship.
 
 \section*{Data availability}
 \small
@@ -686,13 +686,13 @@ While CogniNet-6G achieves outstanding performance, certain limitations define o
 \section*{Declarations}
 \small
 \noindent\textbf{Conflict of interest:} The authors declare that they have no conflict of interest with respect to the research, authorship, or publication of this article.\\
-\textbf{Authors' contributions:} Dharma S conceived the architecture, implemented the Digital Twin and ns-3/ROS2 co-simulation pipeline, and conducted the benchmarking experiments. Kishore B designed the LSTM forecaster and PPO reinforcement learning agent. Praveen Kanth N implemented the semantic classification MLP and data pre-processing routines. Mohanasundaram R supervised the research, formulated the methodological framework, reviewed the results, and finalized the manuscript.
+\textbf{Authors' contributions:} Dharma S conceived the architecture, implemented the Digital Twin and ns-3/ROS2 co-simulation pipeline, and conducted the benchmarking experiments. Kishore B designed the LSTM forecaster and PPO reinforcement learning agent. Praveen Kanth N implemented the semantic classification MLP and data pre-processing routines. Mohanasundaram R and Deepak Raj D M supervised the research, formulated the methodological framework, reviewed the results, and finalized the manuscript.
 
 \let\oldthebibliography\thebibliography
 \let\endoldthebibliography\endthebibliography
 \renewenvironment{thebibliography}[1]{%
   \begin{oldthebibliography}{#1}%
-    \small
+    \fontsize{8.5pt}{10.2pt}\selectfont
     \setlength{\itemsep}{0.2pt}%
     \setlength{\parskip}{0pt}%
 }{%
